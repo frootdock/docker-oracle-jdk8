@@ -21,4 +21,5 @@ RUN apt-get update && \
   apt-get clean all
 
 # Install Java Cryptography Extensions (http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
+RUN mkdir /usr/lib/jvm/java-8-oracle/lib/security
 COPY installs/jce/*.jar ${JAVA_HOME}/lib/security
